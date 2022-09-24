@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        nav{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            margin: 50px auto;
+            text-align: center;
+        }
+        nav > a{
+            display: block;
+            position: relative;
+            width: 100%;
+            background-color: aqua;
+        }
+        .sub-menu{
+            display: none;
+            background-color: pink;
+            position: absolute;
+            width: 200px;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">一级菜单
+            <ul class="sub-menu">
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </a>
+    </nav>
+
+    <script>
+        //目标：鼠标悬停在a标签上 显示.sub-menu
+
+        //1.获取元素
+        var oA = document.querySelector('nav a')
+        var oUl = document.querySelector('.sub-menu')
+
+        //2.鼠标悬停a标签上
+        oA.onmouseover = function(){
+            //3.显示.sub-menu:通过修改class属性去做
+            oUl.className = "sub-menu active"
+        }
+        //目标2：鼠标移出a标签，隐藏.sub-menu
+
+        //1.鼠标移开a标签上
+        oA.onmouseout = function(){
+            //2.显示.sub-menu:通过修改class属性去做
+            oUl.className = "sub-menu"
+        }
+    </script>
+</body>
+</html>
