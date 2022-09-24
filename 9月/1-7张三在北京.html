@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="sr" tyle="text" />
+    <select id= 'dz'>
+        <option>上海</option>
+        <option>北京</option>
+        <option>小日本儿</option>
+    </select>
+    <button id="btn">按钮</button>
+    <script>
+        var sr = document.getElementById('sr')
+        var dz = document.getElementById('dz')
+        var btn = document.getElementById('btn')
+        btn.onclick = function(){
+            window.alert(sr.value + '在' + dz.value)
+        }
+    </script>
+</body>
+</html>
