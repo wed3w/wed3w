@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 150px;
+            margin: 50px auto 0;
+        }
+
+        button {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        ul {
+            list-style: none;
+            border: 1px solid red;
+            display: none;
+        }
+
+        li {
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn">微博</button>
+        <ul id="ul">
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+        </ul>
+    </div>
+
+    <script>
+        //获取元素
+        var oBtn = document.getElementById('btn')
+        var oUl = document.getElementById('ul')
+
+        //鼠标经过button时 button背景色变黄 ul的display变block
+        //新知识点：鼠标事件=》onmouseover  鼠标移入事件
+        oBtn.onmouseover = function () {
+            oBtn.style.backgroundColor = 'yellow'
+            oUl.style.display = 'block'
+        }
+        //鼠标离开button时 button背景色变灰 ul的display变none
+        //新知识点：鼠标事件=》onmouseout  鼠标移出事件
+        oBtn.onmouseout = function () {
+            oBtn.style.backgroundColor = '#ccc'
+            oUl.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

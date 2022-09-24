@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;/*????*/
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            background-color: rgb(51, 51, 51);
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            transition: .4s;
+        }
+        .btn{
+            width: 160px;
+            height: 60px;
+            background-color: #666;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            transition: .4s;
+        }
+        .yuan{
+            width: 60px;
+            height: 60px;
+            background-color: rgb(77, 75, 75);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50px;
+            transition: .4s;
+        }
+        .active{
+            background-color: #f4f4f4;
+        }
+        .active .btn{
+            background-color: rgb(156, 156, 156);
+        }
+        .active .yuan{
+            background-color: #bbbbbb;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <i class="yuan"></i>
+    </div>
+    <script>
+        // 目标：点击圆形，让圆形向右移动，修改left的值
+
+        // 1.获取元素
+        var btn = document.querySelector('.btn')
+        // 2添加点击事件
+        btn.onclick = function(){
+            this.classList.toggle('active')
+            document.body.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
