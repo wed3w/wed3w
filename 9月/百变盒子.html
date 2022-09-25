@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .zd{
+            padding: 10px;
+            height: 600px;
+            width: 600px;   
+            position: relative; 
+            margin: 50px 0 0 50px;  
+            background-color: #ccc;  
+        }
+        .box1{
+            margin: 10px 0 0 10px;
+        }
+        #SZ{
+            background-color: red;
+            border: 0;
+            height: 30px;
+            width: 100px;
+            color: aliceblue;
+        }
+        #SZ:active{
+            background-color: aqua;
+        }
+        .WZ{
+            font-weight: 700;
+        }
+        #btn1{
+            height: 100px;
+            width: 100px;
+            border: 3px solid black;
+            margin: 10px 0 0 10px;
+            position: relative;
+            float: left;
+        }
+
+        #box2{
+            width: 260px;
+            height: 150px;
+            border: 20px solid #f5f5f5;
+            position: absolute;
+            right: -360px;
+            background-color: aqua;
+            padding: 20px 20px 20px 20px;
+            text-align: center;
+            display: none;
+        }
+       #jd1{
+        float: left;
+        width: 140px;
+       }
+       #jd2{
+        float: left;
+        width: 140px;
+        letter-spacing:2.7px;
+       }
+       #jd3{
+        float: left;
+        width: 140px;
+        letter-spacing:2.7px;
+       }
+        #Hong{
+            color: azure;
+            border: 0;
+            background-color: red;
+            height: 30px;
+            width: 30px;
+        }
+        #Hong:hover{
+            border: 2px solid #000;
+        }
+        #Lv{
+            color: azure;
+            border: 0;
+            background-color: greenyellow;
+            height: 30px;
+            width: 30px;
+        }
+        #Lv:hover{
+            border: 2px solid #000;
+        }
+        #Lan{
+            color: azure;
+            border: 0;
+            background-color: blue;
+            height: 30px;
+            width: 30px;
+        }
+        #Lan:hover{
+            border: 2px solid #000;
+        }
+        .kkk{
+            height: 30px;
+            width: 30px;
+        }
+        #gta2{
+            margin-top: 10px;
+        }
+        #gta3{
+            margin-top: 10px;
+        }
+        #gta4{
+            margin-top: 10px;
+       
+        }
+        #hf{
+            width: 80px;
+            height: 40px;
+        }
+        #qd{
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="zd">
+        <div class="box1"><span class="WZ">请为下面的DIV设置样式:</span><button id="SZ">点击设置</button></div>
+
+        <div id="btn1"></div>
+        
+        <div id="box2">
+            <div id="gta1">
+                <div id="jd1">请选择背景颜色:</div>
+                <button id="Hong">红</button>
+                <button id="Lv">绿</button>
+                <button id="Lan">蓝</button>
+            </div>
+            <div id="gta2">
+                <div id="jd2">请选择宽(px):</div>
+                <button id="K200" class="kkk">200</button>
+                <button id="K300" class="kkk">300</button>
+                <button id="K400" class="kkk">400</button>
+            </div>
+            <div id="gta3">
+                <div id="jd3">请选择高(px):</div>
+                <button id="G200" class="kkk">200</button>
+                <button id="G300" class="kkk">300</button>
+                <button id="G400" class="kkk">400</button>
+            </div>
+            <div id="gta4">
+                <input type="reset" value="恢复" id="hf">
+                <button id="qd">确定</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        //点击设置
+        var SZ =document.getElementById('SZ')
+        //box2
+        var box2 =document.getElementById('box2')
+        //方格btn
+        var btn1 =document.getElementById('btn1')
+        //调宽
+        var K200 =document.getElementById('K200')
+        var K400 =document.getElementById('K300')
+        var K400 =document.getElementById('K400')
+        //调高
+        var G200 =document.getElementById('G200')
+        var G400 =document.getElementById('G300')
+        var G400 =document.getElementById('G400')
+        //确定按钮和恢复按钮
+        var qd =document.getElementById('qd')
+        var hf =document.getElementById('hf')
+
+        //颜色按钮
+        var Hong =document.getElementById('Hong')
+        var Lv =document.getElementById('Lv')
+        var Lan =document.getElementById('Lan')
+
+
+
+        //点击操作
+        SZ.onclick=function(){
+            box2.style.display='block'
+        }
+
+        //调色
+        Hong.onclick=function(){
+            btn1.style.backgroundColor='red'
+        }
+        Lv.onclick=function(){
+            btn1.style.backgroundColor='greenyellow'
+        }
+
+        Lan.onclick=function(){
+            btn1.style.backgroundColor='blue'
+        }
+
+
+        //调宽
+        K200.onclick=function(){
+            btn1.style.width='200px'
+        }
+        K300.onclick=function(){
+            btn1.style.width='300px'
+        }
+        K400.onclick=function(){
+            btn1.style.width='400px'
+        }
+
+        //调高
+        G200.onclick=function(){
+            btn1.style.height='200px'
+        }
+        G300.onclick=function(){
+            btn1.style.height='300px'
+        }
+        G400.onclick=function(){
+            btn1.style.height='400px'
+        }
+
+        //确定按钮和恢复按钮
+        qd.onclick=function(){
+            box2.style.display='none'
+        }
+        hf.onclick=function(){
+            btn1.style.height='100px'
+            btn1.style.width='100px'
+            btn1.style.border='3px solid black'
+            btn1.style.backgroundColor='#ccc'
+        }
+
+        
+    </script>
+</body>
+</html>

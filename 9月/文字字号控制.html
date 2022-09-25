@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="box1">+</button><button id="box2">-</button>
+    <div id="box3">了法国的飞机票服务日内测破位前没发过的感觉屁都没发未发热污染给你答复就没吃肉切</div>
+    <script>
+        var box1= document.getElementById('box1')
+        var box2= document.getElementById('box2')
+        var box3= document.getElementById('box3')
+        var on = 16
+        box1.onclick = function(){
+            if(on < 30){
+                box3.style.fontSize = on + 'px'
+                on = on + 1
+            }
+        }
+        box2.onclick = function(){
+            if(on > 0){
+                box3.style.fontSize = on + 'px'
+                on = on - 1
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            margin: 40px auto 0;
+            width: 280px;
+            height: 480px;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px 5px;
+            padding: 10px 10px 10px 10px;
+            
+        }
+    
+        #box1{
+            background-color: azure;
+            width: 280px;
+            height: 460px;
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        top: 7px;
+        left: 2px;
+        
+        }
+       #nrk{
+        position: relative;
+        top: -5px;
+        height: 30px;
+        width: 170px;
+       }
+       #btn{
+        position: relative;
+        top: -5px;
+        height: 34px;
+        width: 50px;
+       }
+       #box2{
+        width: 280px;
+        height:410px;
+        background-color: aqua;
+        overflow: auto;
+       }
+       .box9{
+        height: 60px;
+        /* background-color: azure; */
+        vertical-align: middle;
+       }
+       .box8{
+        height: 60px;
+        text-align: right;
+        /* background-color: red; */
+        vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+    <div id="box">
+        
+        <div id="box1">
+            <div id="box2"></div>
+            <img src="images/1.jpg" id="tp">
+            <input type="text" value="" id="nrk">
+            <button id="btn">发送</button>
+        </div>
+    </div>
+    <script>
+        //图片
+        var tp = document.getElementById('tp')
+
+        var no = true
+        var to = true
+        var jk = 0
+        
+        tp.onclick=function(){
+            if(no){
+                tp.src='images/2.jpg'
+                no=false
+                jk=2
+            }
+            else{
+                tp.src='images/1.jpg'
+                no=true
+                jk=0
+            }
+        }
+        //图片
+
+
+        var box2 =document.getElementById('box2')
+        var nrk = document.getElementById('nrk')
+        var btn = document.getElementById('btn')
+        var ont = ''
+
+        btn.onclick=function(){
+            if(jk==2){
+                
+            ont=nrk.value
+            box2.innerHTML = "<div class='box9'>"+"<img src='images/2.jpg'>" + ont +"</div>" + box2.innerHTML
+            nrk.value=''
+            }
+            else{
+                
+            ont=nrk.value
+            box2.innerHTML ="<div class='box8'>"+ ont + "<img src='images/1.jpg'>" + "</div>" + box2.innerHTML
+            nrk.value=''
+            }
+            
+        }
+    </script>
+</body>
+</html>
