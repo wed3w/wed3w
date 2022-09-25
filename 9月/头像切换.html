@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <img id="tu" src="./images/boy.png">
+
+    <script>
+        //获取元素
+        var oImg = document.getElementById('tu')
+        var on = true
+        //第一次点击图片，切换另一张图片：修改图片的src属性
+        oImg.onclick = function(){
+            if(on) {
+                oImg.src = './images/girl.png'
+                on = false
+            } else {
+                oImg.src = './images/boy.png'
+                on = true
+            }
+        }
+    </script>
+</body>
+</html>
